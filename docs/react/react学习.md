@@ -2,7 +2,8 @@
 title: React 学习
 description: React 学习笔记
 category: React
-sticky: 1
+tag:
+  - React
 ---
 
 # React 学习笔记

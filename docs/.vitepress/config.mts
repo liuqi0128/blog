@@ -63,15 +63,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       {
         text: "个人Demo",
-        items: [
-          { text: "小念AI对话", link: "http://114.132.72.233" }
-        ],
-      },
-      {
-        text: "移动端开发",
-        items: [
-          { text: "Flutter", link: "/flutter/flutter安装流程" }
-        ],
+        items: [{ text: "小念AI对话", link: "http://114.132.72.233/chat" }],
       },
       {
         text: "大前端",
@@ -83,7 +75,15 @@ export default defineConfig({
           { text: "Next", link: "https://www.nextjs.cn/" },
         ],
       },
-      // { text: "关于", link: "/about" },
+      {
+        text: "移动端开发",
+        items: [{ text: "Flutter", link: "/flutter/flutter安装流程" }],
+      },
+      {
+        text: "可视化技术",
+        items: [{ text: "ECharts ", link: "/echarts/Echart图表优化" }],
+      },
+      // { text: "个人信息", link: "/my/info" },
     ],
     socialLinks: [
       {

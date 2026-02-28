@@ -1,9 +1,9 @@
 ---
 title: 小念AI对话实战
-readingTime: false
+description: 小念AI对话实战
+category: 全栈
 tag:
   - 全栈
-recommend: 3
 ---
 
 # 关于小念AI对话
