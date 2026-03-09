@@ -69,10 +69,10 @@ export default defineConfig({
         text: "大前端",
         items: [
           { text: "Vue", link: "https://cn.vuejs.org/" },
-          { text: "React", link: "https://zh-hans.react.dev/" },
+          { text: "React", link: "/react/react学习" },
           { text: "Node", link: "https://nodejs.cn/" },
-          { text: "Nuxt", link: "https://nuxtjs.org.cn/" },
-          { text: "Next", link: "https://www.nextjs.cn/" },
+          // { text: "Nuxt", link: "https://nuxtjs.org.cn/" },
+          // { text: "Next", link: "https://www.nextjs.cn/" },
         ],
       },
       {
@@ -80,8 +80,12 @@ export default defineConfig({
         items: [{ text: "Flutter", link: "/flutter/flutter安装流程" }],
       },
       {
-        text: "可视化技术",
-        items: [{ text: "ECharts ", link: "/echarts/Echart图表优化" }],
+        text: "技术栈",
+        items: [
+          { text: "ECharts ", link: "/echarts/Echart图表优化" },
+          { text: "Electron", link: "/electron/electron开发记录" },
+          { text: "ffmpeg ", link: "/other/本地rtsp流搭建" },
+        ],
       },
       // { text: "个人信息", link: "/my/info" },
     ],
