@@ -61,18 +61,16 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
-      {
-        text: "个人Demo",
-        items: [{ text: "小念AI对话", link: "http://114.132.72.233/chat" }],
-      },
+      // {
+      //   text: "个人Demo",
+      //   items: [{ text: "小念AI对话", link: "http://114.132.72.233/chat" }],
+      // },
       {
         text: "大前端",
         items: [
           { text: "Vue", link: "https://cn.vuejs.org/" },
           { text: "React", link: "/react/react学习" },
           { text: "Node", link: "https://nodejs.cn/" },
-          // { text: "Nuxt", link: "https://nuxtjs.org.cn/" },
-          // { text: "Next", link: "https://www.nextjs.cn/" },
         ],
       },
       {
