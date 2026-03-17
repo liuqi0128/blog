@@ -73,7 +73,7 @@ ffmpeg -re -stream_loop -1 -i test_audio.mp4 -c copy -f rtsp rtsp://127.0.0.1:85
 
 
 ## 三、注意事项
-### 3.1 rtsp流没有音频信息
+### 1 rtsp流没有音频信息
 ```bash
 #查看 test.mp4 的视频详细信息
 ffprobe test.mp4 

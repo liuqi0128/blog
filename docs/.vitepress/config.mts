@@ -81,7 +81,7 @@ export default defineConfig({
         text: "技术栈",
         items: [
           { text: "ECharts ", link: "/echarts/Echart图表优化" },
-          { text: "Electron", link: "/electron/electron开发记录" },
+          { text: "Electron", link: "/electron/Electron如何播放rtsp流" },
           { text: "ffmpeg ", link: "/other/本地rtsp流搭建" },
         ],
       },
