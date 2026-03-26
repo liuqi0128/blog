@@ -39,7 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 在函数式组件中使用 useState 定义状态之后，每当状态发生改变，都会触发函数组件的重新执行，从而根据最新的数据更新 DOM 结构
 
-:::tip
+:::tip 
 注意： 当函数式组件重新执行的时候不会重复调用 useState 方法给数据赋初始值，而是会复用上次的 state 值
 :::
 
@@ -58,7 +58,7 @@ const [date, setDate] = useState(() => {
 });
 ```
 
-:::tips
+:::tip
 ✨ 注意： 以函数形式给赋值的时候只有在组件首次渲染的时候才会执行，当函数式组件重新执行的时候会复用上次的更新的 state 值
 :::
 

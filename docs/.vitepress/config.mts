@@ -71,6 +71,7 @@ export default defineConfig({
           { text: "Vue", link: "https://cn.vuejs.org/" },
           { text: "React", link: "/react/react学习" },
           { text: "Node", link: "https://nodejs.cn/" },
+          { text: "Nest.js", link: "https://docs.nestjs.com/" },
         ],
       },
       {
@@ -82,7 +83,7 @@ export default defineConfig({
         items: [
           { text: "ECharts ", link: "/echarts/Echart图表优化" },
           { text: "Electron", link: "/electron/Electron如何播放rtsp流" },
-          { text: "ffmpeg ", link: "/other/本地rtsp流搭建" },
+          { text: "Ffmpeg ", link: "/other/本地rtsp流搭建" },
         ],
       },
       // { text: "个人信息", link: "/my/info" },
