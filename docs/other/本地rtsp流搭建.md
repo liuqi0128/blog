@@ -1,13 +1,13 @@
 ---
-title: ffmpeg搭建本地rtsp流播放
-description: ffmpeg搭建本地rtsp流播放
-category: ffmpeg
+title: FFmpeg搭建本地rtsp流播放
+description: FFmpeg搭建本地rtsp流播放
+category: 笔记
 ---
 
-# ffmpeg搭建本地rtsp流播放
+# FFmpeg搭建本地rtsp流播放
 
 ## 一.前期准备
-### 1.1 ffmpeg安装
+### 1.1 FFmpeg安装
 步骤
 1. 访问[ffmpeg-8.0.1-full\_build.7z](https://www.gyan.dev/ffmpeg/builds/) ,下载ffmpeg-8.0.1-full_build.7z
 2. 解压到任意目录

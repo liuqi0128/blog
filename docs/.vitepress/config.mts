@@ -84,10 +84,9 @@ export default defineConfig({
         items: [
           { text: "ECharts ", link: "/echarts/Echart图表优化" },
           { text: "Electron", link: "/electron/Electron如何播放rtsp流" },
-          { text: "Ffmpeg ", link: "/other/本地rtsp流搭建" },
         ],
       },
-      // { text: "个人信息", link: "/my/info" },
+      { text: "笔记", link: "/other/本地rtsp流搭建" },
     ],
     socialLinks: [
       {

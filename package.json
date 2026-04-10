@@ -6,7 +6,6 @@
   "author": "粥里有勺糖",
   "license": "MIT",
   "scripts": {
-    "deploy": "gh-pages -d docs/.vitepress/dist",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
