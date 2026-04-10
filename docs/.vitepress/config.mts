@@ -76,7 +76,7 @@ export default defineConfig({
       },
       {
         text: "移动端开发",
-        items: [{ text: "Flutter", link: "/flutter/flutter安装流程" }],
+        items: [{ text: "Flutter", link: "/flutter/Flutter安装流程" }],
       },
       {
         text: "技术栈",
