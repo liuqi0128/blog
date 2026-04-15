@@ -2,11 +2,5 @@
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "framework": "vite",
     "buildCommand": "pnpm build",
-    "outputDirectory": "docs/.vitepress/dist",
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
+    "outputDirectory": "docs/.vitepress/dist"
   }
