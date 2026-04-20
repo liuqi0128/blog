@@ -6,7 +6,7 @@
   "author": "粥里有勺糖",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --force --host 0.0.0.0",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
   },
