@@ -1,6 +1,6 @@
 ---
-title: Flutter环境配置
-description: Flutter环境配置
+title: Flutter安装环境配置  
+description: Flutter安装环境配置
 category: Flutter
 tag:
   - Flutter
