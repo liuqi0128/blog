@@ -14,12 +14,12 @@ import { blogTheme } from "./blog-theme";
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/',
-  // 继承博客主题(@sugarat/theme)
+  // 继承随笔主题(@sugarat/theme)
   extends: blogTheme,
   // base,
   lang: "zh-cn",
-  title: "一念Blog",
-  description: "一念的博客",
+  title: "一念随笔",
+  description: "一念的随笔",
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
@@ -30,7 +30,7 @@ export default defineConfig({
       "meta",
       {
         name: "keywords",
-        content: "LQ,博客,前端,LQ的博客",
+        content: "LQ,随笔,前端,LQ的随笔",
       },
     ],
     [
@@ -40,7 +40,7 @@ export default defineConfig({
         content: "LQ",
       },
     ],
-    ["meta", { property: "og:site_name", content: "LQ的博客" }],
+    ["meta", { property: "og:site_name", content: "LQ的随笔" }],
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中

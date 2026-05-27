@@ -3,8 +3,8 @@ title: ""
 layout: home
 # 首页部分元素定制
 blog:
- author: 一念Blog
- name: '一念Blog'
+ author: 一念随笔
+ name: '一念随笔'
  motto: 
  inspiring:
   - 千万不要因为走得太久，而忘记了我们为什么出发
