@@ -6,11 +6,6 @@ tag:
   - Flutter
 ---
 
-
-Flutter 的命令非常丰富，涵盖了从环境配置、项目开发、调试到最终打包发布的整个生命周期。为了让你更直观地掌握这些命令，我将它们按照**使用场景**进行了分类整理。
-
-以下是 Flutter 开发中常用的核心命令汇总：
-
 ### 🛠️ 环境与配置管理
 在开始开发前，你需要确保环境配置正确。
 
@@ -29,6 +24,7 @@ Flutter 的命令非常丰富，涵盖了从环境配置、项目开发、调试
 这是日常开发中最频繁使用的命令。
 
 *   **`flutter create <项目名>`**：创建一个新的 Flutter 项目。
+*   **`flutter create <项目名> --platforms=ios,android`**：只创建 iOS 和 Android 平台的项目。
 *   **`flutter run`**：在默认设备上运行应用。
 *   **`flutter run -d <device_id>`**：在指定设备上运行（例如 `flutter run -d chrome` 或 `flutter run -d emulator-5554`）。
 *   **`flutter run -d windows`**：在 Windows 桌面端运行（需开启桌面支持）。
