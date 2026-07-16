@@ -13,7 +13,7 @@ import { blogTheme } from "./blog-theme";
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
+  base: "/",
   // 继承随笔主题(@sugarat/theme)
   extends: blogTheme,
   // base,
@@ -67,21 +67,24 @@ export default defineConfig({
       //   items: [{ text: "小念AI对话", link: "http://114.132.72.233/chat" }],
       // },
       {
-        text: "前端",
+        text: "前端开发",
         items: [
           { text: "Vue", link: "https://cn.vuejs.org/" },
           { text: "React", link: "/react/react学习" },
           { text: "Node", link: "https://nodejs.cn/" },
-          { text: "Nest.js", link: "https://docs.nestjs.com/" },
         ],
       },
       {
-        text: "移动端开发",
-        items: [{ text: "Flutter", link: "/flutter/Flutter安装流程" }],
+        text: "后端开发",
+        items: [
+          { text: "Nest.js", link: "https://docs.nestjs.com/" },
+          { text: "Go", link: "/Go/Go学习笔记" },
+        ],
       },
       {
         text: "技术栈",
         items: [
+          { text: "Flutter", link: "/flutter/Flutter安装流程" },
           { text: "ECharts", link: "/echarts/Echart图表优化" },
           { text: "Electron", link: "/electron/Electron如何播放rtsp流" },
         ],
