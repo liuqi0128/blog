@@ -67,7 +67,7 @@ export default defineConfig({
       //   items: [{ text: "小念AI对话", link: "http://114.132.72.233/chat" }],
       // },
       {
-        text: "大前端",
+        text: "前端",
         items: [
           { text: "Vue", link: "https://cn.vuejs.org/" },
           { text: "React", link: "/react/react学习" },
@@ -82,8 +82,14 @@ export default defineConfig({
       {
         text: "技术栈",
         items: [
-          { text: "ECharts ", link: "/echarts/Echart图表优化" },
+          { text: "ECharts", link: "/echarts/Echart图表优化" },
           { text: "Electron", link: "/electron/Electron如何播放rtsp流" },
+        ],
+      },
+      {
+        text: "CI/CD",
+        items: [
+          { text: "Docker", link: "/docker/Docker构建与推送(腾讯云CCR).md" },
         ],
       },
       { text: "笔记", link: "/other/本地rtsp流搭建" },
