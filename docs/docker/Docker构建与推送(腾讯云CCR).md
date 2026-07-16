@@ -83,7 +83,7 @@ docker run --rm -p 8080:8080 \
 curl http://localhost:8080/api/health
 ```
 
-浏览器访问：http://localhost:8080
+浏览器访问：`http://localhost:8080`
 
 按 `Ctrl+C` 停止容器。
 
