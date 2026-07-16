@@ -218,7 +218,15 @@ docker-push: docker-build
 ### 10. 扩展：一键脚本拉取镜像并部署
 
 ```bash
+# 优化Windows 下编辑换行导致的问题
+sed -i 's/\r$//' deploy.sh
+chmod +x deploy.sh
+./deploy.sh --name gin-pro -v 1.0.1
+```
+
+```bash
 #!/usr/bin/env bash
+# deploy.sh
 set -euo pipefail
 
 # 用法:
