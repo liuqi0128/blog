@@ -54,12 +54,10 @@ docker tag yinian-blog ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:yinian-blo
 docker push ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:yinian-blog
 ```
 
-服务器拉取并运行：
+服务器拉取并运行（或用一键脚本）：
 
 ```sh
 docker login ccr.ccs.tencentyun.com
-docker pull ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:yinian-blog
-docker stop yinian-blog 2>/dev/null; docker rm yinian-blog 2>/dev/null
-docker run -d --name yinian-blog --restart always -p 7777:7777 \
-  ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:yinian-blog
+chmod +x deploy.sh
+./deploy.sh
 ```
