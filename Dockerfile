@@ -1,7 +1,8 @@
 FROM nginx:1.27-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY docs/.vitepress/dist /usr/share/nginx/html
+# 与 base: "/blog/" 对齐，站点挂在 /blog/ 下
+COPY docs/.vitepress/dist /usr/share/nginx/html/blog
 
 EXPOSE 7777
 
