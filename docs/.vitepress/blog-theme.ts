@@ -31,7 +31,8 @@ const blogTheme = getThemeConfig({
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    // copyright: 'MIT License | 粥里有勺糖',
+    // copyright: 'MIT License | 一念',
+    version: false,
     icpRecord: {
       name: '湘ICP备2025131748号-2',
       link: 'https://beian.miit.gov.cn/'
@@ -42,24 +43,19 @@ const blogTheme = getThemeConfig({
     },
     
   },
-
   // 主题色修改
   themeColor: 'el-blue',
-
   // 文章默认作者
   author: '一念',
-
   // 友链
   friend: [
     {
       nickname: '粥里有勺糖',
       des: '你的指尖用于改变世界的力量',
-      avatar:
-        'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030~fmt.webp',
+      avatar:'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030~fmt.webp',
       url: 'https://sugarat.top',
     },
   ],
-
 })
 
 export { blogTheme }

@@ -95,6 +95,7 @@ export default defineConfig({
           { text: "Docker", link: "/docker/Docker构建与推送(腾讯云CCR).md" },
         ],
       },
+      { text: "Agent", link: "/Agent/00-hello-agents-node" },
       { text: "笔记", link: "/other/本地rtsp流搭建" },
     ],
     socialLinks: [
