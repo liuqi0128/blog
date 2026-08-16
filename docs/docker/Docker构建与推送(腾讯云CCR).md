@@ -16,10 +16,15 @@ tag:
 2. 在腾讯云控制台创建镜像仓库，地址示例：
 
 ```text
-ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test
+ccr.ccs.tencentyun.com/my_namespace/my_repo
 ```
 
-说明：同一仓库下用 **服务名 + 版本号** 作为 tag，例如：
+说明：把个人相关名称换成占位符，按你自己的仓库替换即可：
+
+- `my_namespace`：腾讯云 CCR **命名空间**（控制台「命名空间」里的名称）
+- `my_repo`：该命名空间下的 **镜像仓库名**
+
+下文示例均按此写法。同一仓库下用 **服务名 + 版本号** 作为 tag，例如：
 
 ```text
 gin-pro-v1.0.0
@@ -32,7 +37,7 @@ user-service-v1.0.0
 不同版本 tag **互不覆盖**（只有同名 tag 才会被覆盖）；回退时拉对应旧版本即可，例如：
 
 ```bash
-docker pull ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+docker pull ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 ```
 
 ### 2. 进入项目目录
@@ -92,22 +97,22 @@ curl http://localhost:8080/api/health
 目标地址示例：
 
 ```text
-ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 ```
 
 ```bash
-docker tag gin_pro:local ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
-docker push ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+docker tag gin_pro:local ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
+docker push ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 ```
 
 推送其他服务 / 版本时改 tag：
 
 ```bash
-docker tag gin_pro:local ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.1
-docker push ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.1
+docker tag gin_pro:local ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.1
+docker push ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.1
 
-docker tag gin_pro:local ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:user-service-v1.0.0
-docker push ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:user-service-v1.0.0
+docker tag gin_pro:local ccr.ccs.tencentyun.com/my_namespace/my_repo:user-service-v1.0.0
+docker push ccr.ccs.tencentyun.com/my_namespace/my_repo:user-service-v1.0.0
 ```
 
 ### 7. 完整流程一览
@@ -124,13 +129,13 @@ docker tag + docker push   →  上传到腾讯云
 ```bash
 docker login ccr.ccs.tencentyun.com
 
-docker pull ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+docker pull ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 
 docker stop gin-pro 2>/dev/null; docker rm gin-pro 2>/dev/null
 
 docker run -d --name gin-pro --restart always -p 8080:8080 \
   -e GIN_MODE=release \
-  ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+  ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 ```
 
 验证：
@@ -150,8 +155,8 @@ curl http://localhost:8080/api/health
 ```bash
 make build && \
 docker build -t gin_pro:local . && \
-docker tag gin_pro:local ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0 && \
-docker push ccr.ccs.tencentyun.com/liuqi_docker/liuqi_test:gin-pro-v1.0.0
+docker tag gin_pro:local ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0 && \
+docker push ccr.ccs.tencentyun.com/my_namespace/my_repo:gin-pro-v1.0.0
 ```
 
 或使用 Makefile：
@@ -168,8 +173,8 @@ AIR := $(GOPATH)/bin/air
 # 同仓库多服务：SERVICE_NAME 区分服务；VERSION 为版本号
 # 最终标签：$(SERVICE_NAME)-$(VERSION)，例如 gin-pro-v1.0.0
 CCR_REGISTRY ?= ccr.ccs.tencentyun.com
-CCR_NAMESPACE ?= liuqi_docker
-SERVICE_REPO ?= liuqi_test
+CCR_NAMESPACE ?= my_namespace
+SERVICE_REPO ?= my_repo
 SERVICE_NAME ?= gin-pro
 VERSION ?= v1.0.0
 IMAGE_TAG ?= $(SERVICE_NAME)-$(VERSION)
@@ -234,8 +239,8 @@ set -euo pipefail
 #   ./deploy.sh -n gin-pro -v v1.0.1 --port 8080
 
 CCR_REGISTRY="${CCR_REGISTRY:-ccr.ccs.tencentyun.com}"
-CCR_NAMESPACE="${CCR_NAMESPACE:-liuqi_docker}"
-SERVICE_REPO="${SERVICE_REPO:-liuqi_test}"
+CCR_NAMESPACE="${CCR_NAMESPACE:-my_namespace}"
+SERVICE_REPO="${SERVICE_REPO:-my_repo}"
 
 NAME=""
 VERSION=""
@@ -260,8 +265,8 @@ usage() {
 
 环境变量（可选）:
   CCR_REGISTRY    默认 ccr.ccs.tencentyun.com
-  CCR_NAMESPACE   默认 liuqi_docker
-  SERVICE_REPO    默认 liuqi_test
+  CCR_NAMESPACE   默认 my_namespace
+  SERVICE_REPO    默认 my_repo
 EOF
 }
 
