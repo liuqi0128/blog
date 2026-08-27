@@ -33,14 +33,14 @@ const blogTheme = getThemeConfig({
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
     // copyright: 'MIT License | 一念',
     version: false,
-    icpRecord: {
-      name: '湘ICP备2025131748号-2',
-      link: 'https://beian.miit.gov.cn/'
-    },
-    securityRecord: {
-      name: '粤公网安备44030002012908号',
-      link: 'https://beian.mps.gov.cn/#/query/webSearch?code=44030002012908'
-    },
+    // icpRecord: {
+    //   name: '湘ICP备2025131748号-2',
+    //   link: 'https://beian.miit.gov.cn/'
+    // },
+    // securityRecord: {
+    //   name: '粤公网安备44030002012908号',
+    //   link: 'https://beian.mps.gov.cn/#/query/webSearch?code=44030002012908'
+    // },
     
   },
   // 主题色修改
