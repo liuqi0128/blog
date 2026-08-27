@@ -3,4 +3,4 @@
     "framework": "vite",
     "buildCommand": "pnpm build",
     "outputDirectory": "docs/.vitepress/dist"
-  }
+}
