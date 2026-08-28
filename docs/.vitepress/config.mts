@@ -78,7 +78,7 @@ export default defineConfig({
         text: "后端开发",
         items: [
           { text: "Nest.js", link: "https://docs.nestjs.com/" },
-          { text: "Go", link: "/Go/Go学习笔记" },
+          { text: "Go", link: "/go/Go学习笔记" },
         ],
       },
       {
@@ -92,6 +92,7 @@ export default defineConfig({
         ],
       },
       { text: "笔记", link: "/other/本地rtsp流搭建" },
+      { text: "项目经历", link: "/projectExperience/项目经历" },
     ],
     socialLinks: [
       {
