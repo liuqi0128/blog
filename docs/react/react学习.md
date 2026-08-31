@@ -157,6 +157,8 @@ const el2 = React.createElement("h1", { className: "title" }, "Hello");
 
 几个和 HTML 不同的点：
 
+::: v-pre
+
 | HTML | JSX | 原因 |
 |------|-----|------|
 | `class` | `className` | `class` 是 JS 保留字 |
@@ -164,6 +166,8 @@ const el2 = React.createElement("h1", { className: "title" }, "Hello");
 | `style="color: red"` | `style={{ color: "red" }}` | style 必须是对象 |
 | 注释 `<!-- -->` | `{/* */}` | 花括号里写 JS |
 | 多个根节点要包一层 | 可用 `<>...</>` Fragment | 少一层无意义 DOM |
+
+:::
 
 花括号里可以放任意 JS 表达式（不能直接放 `if` 语句）：
 
